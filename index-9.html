@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MemesBoost – Promote your Solana meme coin</title>
+<style>
+:root{--bg:#0c0e16;--card:#151927;--line:#262c42;--tx:#eef0fa;--mu:#a3a9c4;--ac:#7c6cff;--ac2:#b04cf0;--ok:#35d07f;--lime:#c6ff3d}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--ac)}
+header{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:#0c0e16ee;border-bottom:1px solid var(--line)}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;text-decoration:none;color:var(--tx)}
+.logo i{width:34px;height:34px;border-radius:50%;background:var(--lime);display:grid;place-items:center}
+.logo b{color:var(--ac)}
+.hr{display:flex;align-items:center;gap:14px}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--ok)}
+button{font:inherit;cursor:pointer}
+.burger{background:none;border:0;color:var(--tx);padding:6px}
+nav{display:none;position:fixed;inset:62px 0 0 0;background:var(--bg);z-index:19;padding:28px 24px;flex-direction:column;gap:22px}
+nav.open{display:flex}
+nav a{color:var(--tx);text-decoration:none;font-size:20px}
+.btn{border:0;border-radius:14px;padding:15px 20px;font-weight:700;color:#fff;background:linear-gradient(90deg,var(--ac),var(--ac2));width:100%}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.btn.s{background:#2a3050;width:auto;padding:10px 16px}
+section{padding:56px 20px;max-width:1000px;margin:0 auto}
+h1{font-size:clamp(40px,9vw,72px);line-height:1.05;margin:0 0 18px;text-align:center;background:linear-gradient(90deg,#6c7dff,#b06cff);-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-size:clamp(28px,5vw,38px);margin:0 0 10px;text-align:center}
+.sub{color:var(--mu);text-align:center;max-width:620px;margin:0 auto 28px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px;max-width:560px;margin:0 auto}
+label{display:block;color:var(--mu);margin:0 0 8px;font-size:15px}
+input,select{width:100%;background:#1d2236;border:1px solid var(--line);border-radius:14px;color:var(--tx);padding:15px 16px;font:inherit;margin-bottom:18px}
+input:focus,select:focus,button:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+.row{display:flex;gap:10px}
+.row input{margin:0}
+.tok{display:flex;gap:12px;align-items:center;background:#1d2236;border-radius:14px;padding:12px;margin-bottom:18px}
+.tok img{width:46px;height:46px;border-radius:12px;background:#2a3050}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.chip{background:#262c4d;color:#c9c4ff;border-radius:99px;padding:3px 12px;font-size:13px;text-transform:capitalize}
+.tg{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#1d2236;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:18px}
+.tg small{display:block;color:var(--mu)}
+.tg input{width:46px;height:26px;margin:0;accent-color:var(--ac)}
+.msg{min-height:22px;font-size:14px;margin:12px 0 0;color:var(--mu)}
+.msg.e{color:#ff7a7a}.msg.g{color:var(--ok)}
+.pay{display:none;border:1px dashed var(--ac);border-radius:14px;padding:16px;margin-bottom:18px}
+.pay.on{display:block}
+.pay code{display:block;word-break:break-all;background:#1d2236;border-radius:10px;padding:10px;margin:8px 0;font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.c{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px}
+.c h3{margin:0 0 6px;font-size:20px}
+.c p{margin:0;color:var(--mu)}
+.price{font-size:30px;font-weight:800;color:var(--lime)}
+.pro{border-color:var(--ac);background:linear-gradient(160deg,#1c1840,#151927)}
+ul.ck{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+ul.ck li:before{content:"✓";color:var(--ok);margin-right:10px;font-weight:800}
+.li{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px;margin-bottom:12px}
+.li img{width:52px;height:52px;border-radius:14px;background:#2a3050}
+.li div{flex:1;min-width:0}.li b{display:block;overflow:hidden;text-overflow:ellipsis}
+.li span{color:var(--ac)}
+footer{border-top:1px solid var(--line);padding:36px 20px;text-align:center;color:var(--mu);font-size:14px}
+footer p{max-width:640px;margin:14px auto}
+.sup{display:inline-block;background:#1d2440;border-radius:99px;padding:12px 22px;color:#8f9bff;text-decoration:none;font-size:17px}
+@media (prefers-reduced-motion:no-preference){.btn{transition:filter .15s}.btn:hover:not(:disabled){filter:brightness(1.12)}}
+</style>
+</head>
+<body>
+<header>
+<a class="logo" href="#home"><i><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0c0e16" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20V5M5 11l7-7 7 7"/></svg></i><span>Memes<b>Boost</b></span></a>
+<div class="hr"><span class="dot" title="Online"></span><button class="burger" id="bg" aria-label="Menu"><svg width="26" height="26" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div>
+</header>
+<nav id="nav">
+<a href="#home">Home</a><a href="#how">How it works</a><a href="#packages">Packages</a><a href="#site">Free website</a><a href="#promoted">Promoted tokens</a>
+<button class="btn" id="cw">Connect Wallet</button>
+</nav>
+
+<section id="home">
+<h1>Boost. Trend. Moon.</h1>
+<p class="sub">Put your Solana meme coin in front of traders. Paste your token address, pick a time slot, pay in SOL.</p>
+<div class="box">
+<label for="addr">Token address</label>
+<div class="row" style="margin-bottom:18px"><input id="addr" placeholder="Enter Solana token address…" autocomplete="off"><button class="btn s" id="chk">Check</button></div>
+<div id="tk"></div>
+<label for="pk">Promotion type</label>
+<select id="pk"></select>
+<div class="tg"><div><b>Include free website</b><small>Customize and get your own token website</small></div><input type="checkbox" id="web" aria-label="Include free website"></div>
+<div class="pay" id="pay">
+<b>Send <span id="amt"></span> SOL to:</b>
+<code id="pa"></code>
+<button class="btn s" id="cp">Copy address</button>
+<label for="sig" style="margin-top:14px">Then paste the transaction signature</label>
+<input id="sig" placeholder="Transaction signature" autocomplete="off" style="margin:0">
+</div>
+<button class="btn" id="go" disabled>Check a token first</button>
+<p class="msg" id="msg" role="status"></p>
+<p class="msg" id="wm"></p>
+</div>
+</section>
+
+<section id="how">
+<h2>How it works</h2>
+<p class="sub">Four steps, no sign-up.</p>
+<div class="grid">
+<div class="c"><h3>1. Paste your token</h3><p>We read your token from the chain data and show which DEXes it trades on.</p></div>
+<div class="c"><h3>2. Pick a time slot</h3><p>From a free 15-minute slot up to a full 24 hours.</p></div>
+<div class="c"><h3>3. Pay in SOL</h3><p>Send the amount, paste the transaction signature, and we verify it on-chain.</p></div>
+<div class="c"><h3>4. Go live</h3><p>Your token appears on the Promoted list with a live countdown.</p></div>
+</div>
+</section>
+
+<section id="packages">
+<h2>Packages</h2>
+<p class="sub">Pay only for the time you need.</p>
+<div class="grid" id="pkgs"></div>
+</section>
+
+<section id="site">
+<h2>Every meme coin deserves a home</h2>
+<p class="sub">Add the free website option to any package and we’ll set up a simple page for your token.</p>
+<div class="c pro" style="max-width:560px;margin:0 auto">
+<h3>Token website</h3>
+<ul class="ck" style="margin-top:14px">
+<li>Your token logo, name and chart link</li>
+<li>Links to your Twitter and Telegram</li>
+<li>Live price widget</li>
+<li>“Buy now” button to Raydium or Pump.fun</li>
+<li>Optional roadmap or meme gallery</li>
+</ul>
+</div>
+</section>
+
+<section id="promoted">
+<h2>Promoted on MemesBoost</h2>
+<p class="sub">Tokens that are live right now.</p>
+<div id="live" style="max-width:560px;margin:0 auto"></div>
+</section>
+
+<footer>
+<a class="sup" id="sp" href="#">Need help? Contact support</a>
+<p>MemesBoost does not guarantee returns or specific results. Promotion of a coin here or on any other platform is not a guarantee of price or volume. Do your own research. Crypto trading involves substantial risk and may not suit every investor.</p>
+<b>Memes<span style="color:var(--ac)">Boost</span></b> © 2026
+</footer>
+
+<script>
+const PAY="7RGXhC84w57h6DpQ9kXuJxaYK3G1W7kiDBHy4hzECcL7";        // your Solana wallet that receives payments
+const SUPPORT="https://t.me/YOUR_SUPPORT"; // your Telegram / support link
+const RPC="https://api.mainnet-beta.solana.com";
+const P=[{n:"Free",m:15,s:0,l:"15 min"},{n:"Starter",m:60,s:0.1,l:"1 hour"},{n:"Plus",m:180,s:0.3,l:"3 hours"},{n:"Pro",m:360,s:0.5,l:"6 hours"},{n:"Max",m:1440,s:1,l:"24 hours"}];
+const $=i=>document.getElementById(i);
+const ld=(k,d)=>{try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}};
+const sv=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
+let tok=null;
+$("sp").href=SUPPORT;
+$("bg").onclick=()=>$("nav").classList.toggle("open");
+document.querySelectorAll("nav a").forEach(a=>a.onclick=()=>$("nav").classList.remove("open"));
+P.forEach((p,i)=>{
+ const o=document.createElement("option");o.value=i;o.textContent=p.n+" ("+p.l+") - "+(p.s?p.s+" SOL":"FREE");$("pk").appendChild(o);
+ const c=document.createElement("div");c.className="c"+(i==3?" pro":"");
+ const h=document.createElement("h3");h.textContent=p.n+" · "+p.l;
+ const pr=document.createElement("div");pr.className="price";pr.textContent=p.s?p.s+" SOL":"Free";
+ c.append(h,pr);$("pkgs").appendChild(c);
+});
+function msg(t,c){const m=$("msg");m.textContent=t;m.className="msg "+(c||"")}
+function btn(){const p=P[$("pk").value];$("go").disabled=!tok;$("go").textContent=tok?(p.s?"Promote for "+p.l+" - "+p.s+" SOL":"Promote for "+p.l+" - FREE"):"Check a token first";$("pay").classList.remove("on")}
+$("pk").onchange=btn;
+$("chk").onclick=async()=>{
+ const a=$("addr").value.trim();tok=null;$("tk").textContent="";btn();
+ if(!/^[1-9A-HJ-NP-Za-km-z]{32,44}$/.test(a)){msg("That doesn’t look like a Solana token address.","e");return}
+ msg("Checking token…");
+ try{
+  const r=await(await fetch("https://api.dexscreener.com/latest/dex/tokens/"+a)).json();
+  const ps=(r.pairs||[]).filter(p=>p.chainId==="solana"&&p.baseToken.address===a);
+  if(!ps.length){msg("No Solana trading pair found for this address.","e");return}
+  const b=ps[0].baseToken,im=ps[0].info&&ps[0].info.imageUrl;
+  tok={a,name:b.name,sym:b.symbol,img:im&&im.startsWith("https://")?im:"",dex:[...new Set(ps.map(p=>p.dexId))]};
+  const w=document.createElement("div");w.className="tok";
+  const i=document.createElement("img");i.alt="";if(tok.img)i.src=tok.img;
+  const d=document.createElement("div");const n=document.createElement("b");n.textContent=tok.name+" ($"+tok.sym+")";
+  const ch=document.createElement("div");ch.className="chips";
+  tok.dex.forEach(x=>{const s=document.createElement("span");s.className="chip";s.textContent=x;ch.appendChild(s)});
+  d.append(n,ch);w.append(i,d);$("tk").appendChild(w);
+  msg("Token found. Pick a package.","g");btn();
+ }catch(e){msg("Couldn’t reach the token data service. Try again.","e")}
+};
+function activate(p){
+ const L=ld("mb_live",[]);
+ L.push({a:tok.a,name:tok.name,sym:tok.sym,img:tok.img,end:Date.now()+p.m*60000,web:$("web").checked});
+ sv("mb_live",L);draw();
+}
+$("go").onclick=async()=>{
+ const p=P[$("pk").value];if(!tok)return;
+ if(!p.s){
+  const k="mb_free_"+tok.a,t=ld(k,0);
+  if(Date.now()-t<864e5){msg("The free slot can be used once every 24 hours per token.","e");return}
+  sv(k,Date.now());activate(p);msg("Your token is live for "+p.l+".","g");return;
+ }
+ if(!$("pay").classList.contains("on")){
+  $("amt").textContent=p.s;$("pa").textContent=PAY;$("pay").classList.add("on");
+  $("go").textContent="Verify payment & start";msg("Send the exact amount, then paste the signature.");return;
+ }
+ const sig=$("sig").value.trim(),used=ld("mb_sigs",[]);
+ if(sig.length<60){msg("Paste the full transaction signature.","e");return}
+ if(used.includes(sig)){msg("This signature was already used.","e");return}
+ msg("Verifying on-chain…");
+ try{
+  const r=await(await fetch(RPC,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({jsonrpc:"2.0",id:1,method:"getTransaction",params:[sig,{encoding:"jsonParsed",maxSupportedTransactionVersion:0,commitment:"confirmed"}]})})).json();
+  const t=r.result;
+  if(!t){msg("Transaction not found yet. Wait a few seconds and try again.","e");return}
+  if(t.meta.err){msg("That transaction failed on-chain.","e");return}
+  const ks=t.transaction.message.accountKeys.map(k=>k.pubkey||k),i=ks.indexOf(PAY);
+  if(i<0||t.meta.postBalances[i]-t.meta.preBalances[i]<p.s*1e9-1000){msg("Payment to the MemesBoost address for "+p.s+" SOL not found in this transaction.","e");return}
+  if(Date.now()/1000-t.blockTime>7200){msg("This payment is older than 2 hours.","e");return}
+  used.push(sig);sv("mb_sigs",used);activate(p);$("sig").value="";btn();
+  msg("Payment verified. Your token is live for "+p.l+".","g");
+ }catch(e){msg("Verification failed. Try again in a moment.","e")}
+};
+$("cp").onclick=()=>{navigator.clipboard&&navigator.clipboard.writeText(PAY);$("cp").textContent="Copied"};
+$("cw").onclick=async()=>{
+ const s=window.solana;
+ if(!s||!s.isPhantom){$("wm").textContent="No supported wallet was detected. Install Phantom to connect.";$("nav").classList.remove("open");location.hash="home";return}
+ try{const r=await s.connect(),k=r.publicKey.toString();$("cw").textContent=k.slice(0,4)+"…"+k.slice(-4);$("wm").textContent=""}catch(e){}
+};
+function draw(){
+ const L=ld("mb_live",[]).filter(x=>x.end>Date.now()).sort((a,b)=>b.end-a.end),box=$("live");box.textContent="";
+ if(!L.length){const p=document.createElement("p");p.className="sub";p.textContent="No token is live right now. Yours could be the first.";box.appendChild(p);return}
+ L.forEach(x=>{
+  const r=document.createElement("div");r.className="li";
+  const i=document.createElement("img");i.alt="";if(x.img)i.src=x.img;
+  const d=document.createElement("div"),b=document.createElement("b"),s=document.createElement("span");
+  b.textContent=x.name+" ($"+x.sym+")";s.dataset.end=x.end;d.append(b,s);r.append(i,d);box.appendChild(r);
+ });
+ tick();
+}
+function tick(){document.querySelectorAll("#live span[data-end]").forEach(s=>{const t=Math.max(0,s.dataset.end-Date.now()),m=Math.floor(t/6e4),h=Math.floor(m/60);s.textContent=(h?h+"h ":"")+(m%60)+"m "+Math.floor(t/1e3%60)+"s left"})}
+setInterval(()=>{tick();if(document.querySelector("#live .li")&&ld("mb_live",[]).every(x=>x.end>Date.now())===false)draw()},1000);
+draw();btn();
+</script>
+</body>
+</html>
